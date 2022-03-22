@@ -1,38 +1,97 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+  
 }
 
-.App-link {
-  color: #61dafb;
+body{
+  background-color: #2C394B;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-container  {
+  padding: 10px;
+  text-align: left;
+
+}
+
+h1{
+  text-align: start;
+  padding-left: 10px;
+}
+
+form {
+  width: 419px;
+  height: 531px;
+  border-radius: 10px;
+  background: #D1D1D1;
+  top: auto;
+  margin-top: 35px;
+  margin-left: 70px;
+  box-shadow: 12px 10px 12px rgb(0, 0, .3);
+  
+}
+ input {
+   border: none;
+   align-items:flex-end;
+   border-radius: 8px;
+   width: 355px;
+   height: 30px;
+   
+ }
+
+ul li {
+  width: 381px;
+  height: 174px;
+  left: 101px;
+  display: inline-block;
+  background: #DDDDDD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 12px 10px 12px rgb(0, 0, .3);
+  
+}
+
+.submit-button {
+  width: 219px;
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  background-color: #2C394B ;
+  color: #D1D1D1;
+}
+
+.cancel-button {
+  width: 219px;
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #D82148;
+  color: #D1D1D1;
+}
+
+.edit{
+  width: 119px;
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  background-color: #2C394B ;
+  color: #D1D1D1;
+  
+  
+}
+
+.delete{
+  width: 119px;
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #D82148;
+  color: #D1D1D1;
+  
 }
