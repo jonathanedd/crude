@@ -4,10 +4,10 @@ import React, { useEffect, useState } from 'react';
 const UsersForm = ({ getUsers, userSelect, setUserSelect, selectU }) => {
 
     // States inputs control (POST)
-    const [ email, setEmail ] = useState("email");
-    const [ password, setPassword ] = useState('password');
-    const [ firstName, setFirstName ] = useState('first name');
-    const [ lastName, setLastName ] = useState('last name');
+    const [ email, setEmail ] = useState("");
+    const [ password, setPassword ] = useState('');
+    const [ firstName, setFirstName ] = useState('');
+    const [ lastName, setLastName ] = useState('');
     const [ birthday, setBirthday ] = useState('');
 
     // const [ showForm , setShowForm ] = useState(false)
@@ -15,14 +15,14 @@ const UsersForm = ({ getUsers, userSelect, setUserSelect, selectU }) => {
     
 
     
-    // const setStates = () => {
-    //     getUsers();
-    //     setEmail('');
-    //     setPassword('');
-    //     setFirstName('');
-    //     setLastName('');
-    //     setBirthday('');
-    // }
+    const setStates = () => {
+        // getUsers();
+        setEmail('');
+        setPassword('');
+        setFirstName('');
+        setLastName('');
+        setBirthday('');
+    }
 
 
 
@@ -34,16 +34,11 @@ const UsersForm = ({ getUsers, userSelect, setUserSelect, selectU }) => {
             setLastName(userSelect.last_name);
             setBirthday(userSelect.birthday)
         }else{
-            // setStates()
-            getUsers();
-            setEmail('');
-            setPassword('');
-            setFirstName('');
-            setLastName('');
-            setBirthday('');
+            setStates()
+            
         }
         
-    }, [userSelect , getUsers])
+    }, [userSelect])
 
     // console.log(userSelect);
 
@@ -67,11 +62,7 @@ const UsersForm = ({ getUsers, userSelect, setUserSelect, selectU }) => {
             axios.post('https://users-crud1.herokuapp.com/users/', user )
             .then( () =>{ 
                 getUsers();
-                setEmail('');
-                setPassword('');
-                setFirstName('');
-                setLastName('');
-                setBirthday('');
+                setStates();
             });
         }
         
