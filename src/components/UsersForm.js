@@ -15,14 +15,14 @@ const UsersForm = ({ getUsers, userSelect, setUserSelect, selectU }) => {
     
 
     
-    const setStates = () => {
-        getUsers();
-        setEmail('');
-        setPassword('');
-        setFirstName('');
-        setLastName('');
-        setBirthday('');
-    }
+    // const setStates = () => {
+    //     getUsers();
+    //     setEmail('');
+    //     setPassword('');
+    //     setFirstName('');
+    //     setLastName('');
+    //     setBirthday('');
+    // }
 
 
 
@@ -34,7 +34,13 @@ const UsersForm = ({ getUsers, userSelect, setUserSelect, selectU }) => {
             setLastName(userSelect.last_name);
             setBirthday(userSelect.birthday)
         }else{
-            setStates()
+            // setStates()
+            getUsers();
+            setEmail('');
+            setPassword('');
+            setFirstName('');
+            setLastName('');
+            setBirthday('');
         }
         
     }, [userSelect, {setStates} ])
