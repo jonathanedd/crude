@@ -43,7 +43,7 @@ const UsersForm = ({ getUsers, userSelect, setUserSelect, selectU }) => {
             setBirthday('');
         }
         
-    }, [userSelect, {setStates} ])
+    }, [userSelect , getUsers])
 
     // console.log(userSelect);
 
@@ -66,7 +66,12 @@ const UsersForm = ({ getUsers, userSelect, setUserSelect, selectU }) => {
             //POST petition 
             axios.post('https://users-crud1.herokuapp.com/users/', user )
             .then( () =>{ 
-                setStates()
+                getUsers();
+                setEmail('');
+                setPassword('');
+                setFirstName('');
+                setLastName('');
+                setBirthday('');
             });
         }
         
