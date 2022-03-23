@@ -37,7 +37,7 @@ const UsersForm = ({ getUsers, userSelect, setUserSelect, selectU }) => {
             setStates()
         }
         
-    }, [userSelect])
+    }, [userSelect, setStates() ])
 
     // console.log(userSelect);
 
